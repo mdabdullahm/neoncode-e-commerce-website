@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import Link from 'next/link'; // লিঙ্ক ইমপোর্ট করুন
+import Link from 'next/link'; 
 
 const tshirtProducts = [
   { id: 1, name: "Premium Cotton Black Tee", price: "1,250", brand: "NeonStyle", size: "L", color: "Black", img: "https://i.ibb.co.com/XrMF7r8z/young-man-black-glasses-wearing-grey-polo-shirt-looking-aside-with-confident-expression-standing-blu.jpg", badge: "Best Seller" },
