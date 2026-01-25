@@ -7,6 +7,7 @@ import { Autoplay, EffectFade } from 'swiper/modules';
 // Swiper styles
 import 'swiper/css';
 import 'swiper/css/effect-fade';
+import Link from 'next/link';
 
 const bannerData = [
   { id: 1, title: "LATEST MOBILE PHONES", subtitle: "TECH REVOLUTION", desc: "সেরা সব স্মার্টফোনে পাচ্ছেন আকর্ষণীয় ডিসকাউন্ট অফার।", bgColor: "bg-[#60a5fa]", rightColor: "bg-[#dbeafe]", img: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9", tag: "Mobile" },
@@ -31,7 +32,7 @@ export default function HomePage() {
   return (
     // আপনার দেওয়া গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড
     <main className="min-h-screen bg-gradient-to-r from-[#5BF527] to-[#C1F863] selection:bg-black selection:text-white">
-      
+
       {/* section 1: Hero Slider */}
       <section className="px-3 py-3 md:px-8 md:py-6">
         <div className="relative rounded-[35px] md:rounded-[45px] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.2)] h-auto md:h-[550px] bg-white">
@@ -101,9 +102,11 @@ export default function HomePage() {
             </h2>
             <p className="text-black/60 font-bold mt-1">সবচেয়ে জনপ্রিয় পণ্যগুলো এখন আপনার হাতের মুঠোয়</p>
           </div>
-          <button className="hidden md:block bg-black text-white px-8 py-3 rounded-full font-black text-sm hover:bg-[#f5c451] hover:text-black transition-all shadow-xl active:scale-95">
-            View All Items
-          </button>
+          <Link href="/all-items">
+            <button className="hidden md:block bg-black text-white px-8 py-3 rounded-full font-black text-sm hover:bg-[#f5c451] hover:text-black transition-all shadow-xl active:scale-95">
+              View All Items
+            </button>
+          </Link>
         </div>
 
         {/* Product Grid: White Cards to pop against green BG */}
@@ -136,11 +139,11 @@ export default function HomePage() {
                     {product.name}
                   </h3>
                   <div className="flex justify-between items-center mt-2">
-                     <p className="font-black text-2xl text-black">৳{product.price}</p>
-                     <div className="flex items-center gap-1 text-yellow-400 text-[10px]">
-                        {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
-                        <span className="text-gray-400 font-black ml-1">(4.8)</span>
-                     </div>
+                    <p className="font-black text-2xl text-black">৳{product.price}</p>
+                    <div className="flex items-center gap-1 text-yellow-400 text-[10px]">
+                      {"★★★★★".split("").map((s, i) => <span key={i}>{s}</span>)}
+                      <span className="text-gray-400 font-black ml-1">(4.8)</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -149,9 +152,11 @@ export default function HomePage() {
         </div>
 
         {/* Mobile View All Button */}
-        <button className="w-full mt-12 md:hidden bg-black text-white py-5 rounded-[2rem] font-black text-sm shadow-2xl active:scale-95 transition-all">
-          VIEW ALL COLLECTIONS
-        </button>
+        <Link href="/all-items">
+          <button className="w-full mt-12 md:hidden bg-black text-white py-5 rounded-[2rem] font-black text-sm shadow-2xl active:scale-95 transition-all">
+            VIEW ALL COLLECTIONS
+          </button>
+        </Link>
       </section>
       {/* section 3: Service Highlights (Trust Badges) */}
       <section className="px-6 py-12 md:px-12">
@@ -176,7 +181,7 @@ export default function HomePage() {
       {/* section 4: Mega Promo Banner */}
       <section className="px-6 py-12 md:px-12">
         <div className="relative w-full bg-black rounded-[45px] overflow-hidden flex flex-col md:flex-row min-h-[400px] shadow-[0_30px_60px_rgba(0,0,0,0.4)]">
-          
+
           {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[#5BF527] rounded-full blur-[120px] opacity-20"></div>
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#C1F863] rounded-full blur-[120px] opacity-20"></div>
@@ -194,33 +199,33 @@ export default function HomePage() {
               আপনার পছন্দের সব ব্র্যান্ডের ওপর পাচ্ছেন অবিশ্বাস্য ছাড়। অফারটি শেষ হওয়ার আগেই লুফে নিন।
             </p>
             <div className="flex items-center gap-6">
-               <button className="bg-[#5BF527] text-black px-10 py-4 rounded-2xl font-black hover:scale-110 transition-all shadow-[0_0_20px_rgba(91,245,39,0.4)]">
-                 Claim Discount
-               </button>
-               <div className="hidden sm:block">
-                  <p className="text-white font-black text-2xl tracking-tighter">05 : 12 : 45 : 02</p>
-                  <p className="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Days : Hrs : Min : Sec</p>
-               </div>
+              <button className="bg-[#5BF527] text-black px-10 py-4 rounded-2xl font-black hover:scale-110 transition-all shadow-[0_0_20px_rgba(91,245,39,0.4)]">
+                Claim Discount
+              </button>
+              <div className="hidden sm:block">
+                <p className="text-white font-black text-2xl tracking-tighter">05 : 12 : 45 : 02</p>
+                <p className="text-gray-500 text-[10px] uppercase font-bold tracking-widest">Days : Hrs : Min : Sec</p>
+              </div>
             </div>
           </div>
 
           {/* Right Side: Promo Image (Mockup) */}
           <div className="flex-1 relative flex items-center justify-center p-10 bg-gradient-to-br from-gray-900 to-black">
-             <div className="relative">
-                {/* Product Image Placeholder */}
-                <div className="absolute inset-0 bg-[#5BF527] rounded-full blur-[60px] opacity-10"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600" 
-                  alt="Headphones Promo" 
-                  className="relative z-10 w-full max-w-[350px] drop-shadow-[0_20px_50px_rgba(91,245,39,0.3)] rotate-[-10deg] hover:rotate-0 transition-all duration-700"
-                />
-             </div>
-             
-             {/* Floating Badge */}
-             <div className="absolute top-10 right-10 bg-white w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-2xl rotate-12 border-4 border-[#5BF527]">
-                <p className="text-black font-black text-xl leading-none">SAVE</p>
-                <p className="text-[#5BF527] font-black text-2xl leading-none">70%</p>
-             </div>
+            <div className="relative">
+              {/* Product Image Placeholder */}
+              <div className="absolute inset-0 bg-[#5BF527] rounded-full blur-[60px] opacity-10"></div>
+              <img
+                src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?q=80&w=600"
+                alt="Headphones Promo"
+                className="relative z-10 w-full max-w-[350px] drop-shadow-[0_20px_50px_rgba(91,245,39,0.3)] rotate-[-10deg] hover:rotate-0 transition-all duration-700"
+              />
+            </div>
+
+            {/* Floating Badge */}
+            <div className="absolute top-10 right-10 bg-white w-24 h-24 rounded-full flex flex-col items-center justify-center shadow-2xl rotate-12 border-4 border-[#5BF527]">
+              <p className="text-black font-black text-xl leading-none">SAVE</p>
+              <p className="text-[#5BF527] font-black text-2xl leading-none">70%</p>
+            </div>
           </div>
         </div>
       </section>
