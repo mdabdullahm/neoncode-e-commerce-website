@@ -44,7 +44,7 @@ export default function NotFound() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-           <Link href="/contact" className="w-full sm:w-auto bg-black text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-[#5BF527] hover:text-black transition-all shadow-xl active:scale-95 group">
+           <Link href="https://wa.me/8801344224787" className="w-full sm:w-auto bg-black text-white px-10 py-5 rounded-2xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3 hover:bg-[#5BF527] hover:text-black transition-all shadow-xl active:scale-95 group">
               <MessageSquare size={18} /> Contact Dev Team
            </Link>
 
