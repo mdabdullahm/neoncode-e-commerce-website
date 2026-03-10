@@ -8,7 +8,7 @@ import { Wrench, MessageSquare, Globe, ArrowRight, Construction } from 'lucide-r
 // ফাংশনটি অবশ্যই 'export default' হতে হবে
 export default function NotFound() {
     return (
-        <main className="min-h-screen bg-gradient-to-r from-[#5BF527] to-[#C1F863] flex items-center justify-center p-6">
+        <main className="min-h-screen bg-gradient-to-r from-[#2738f5] to-[#C1F863] flex items-center justify-center p-6">
 
             <motion.div
                 initial={{ opacity: 0, y: 30 }}

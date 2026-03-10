@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-24 pb-12 rounded-t-[3.5rem] md:rounded-t-[5rem] overflow-hidden relative shadow-[0_-20px_50px_rgba(0,0,0,0.5)] border-t border-white/5">
+    <footer className="bg-black text-white pt-24 pb-12 overflow-hidden relative shadow-[0_-20px_50px_rgba(0,0,0,0.5)] border-t border-white/5">
       
       {/* ১. ব্যাকগ্রাউন্ড ডেকোরেশন (Neon Glow) */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-1 bg-gradient-to-r from-transparent via-[#5BF527] to-transparent opacity-50"></div>

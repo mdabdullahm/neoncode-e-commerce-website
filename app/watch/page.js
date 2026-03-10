@@ -33,7 +33,7 @@ const WatchPage = () => {
                                 LUXURY <br /> <span className="text-[#5BF527] drop-shadow-[0_0_20px_rgba(91,245,39,0.5)]">WATCHES</span>
                             </h1>
                             <p className="text-gray-400 mt-6 max-w-sm font-medium italic">
-                                "সময় আপনার, স্টাইল আমাদের।" সেরা সব ব্র্যান্ডের অরিজিনাল ঘড়ি এখন আপনার হাতের মুঠোয়।
+                                Your time, our style. Original watches from all the best brands are now at your fingertips.
                             </p>
                         </div>
 
